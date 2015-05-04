@@ -1,5 +1,5 @@
 # java8kanren
-After reading "The reasoned Schemer" I had to try to write a version myself. 
+After reading "The Reasoned Schemer" I had to try to write a version myself. 
 The implementation is basically the last section "Connecting the wires", translated to java. It uses the streams of java 8, and 
 some functions, like walk, reify and unify has naturally become methods on objects. The implementation is not complete or perfect, but you can run (simple) goals including conde. The test classes shows examples from chapter 1 and 9 from the book.
 
