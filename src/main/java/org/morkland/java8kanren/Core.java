@@ -7,10 +7,6 @@ import java.util.Iterator;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-/**
- * 
- *
- */
 public class Core {
 
     public static Stream<Thing> run(int n, Thing x, Goal... goals) {
@@ -52,18 +48,7 @@ public class Core {
     }
 
     public static Stream<Substitution> mplus(Stream<Substitution> subs1, Stream<Substitution> subs2) {
-        Iterator<Substitution> iterator = subs1.iterator();
-        if (!iterator.hasNext()) {
-            return subs2;
-        }
-        Substitution first = iterator.next();
-        if (!iterator.hasNext()) {
-            return Stream.concat(Stream.of(first), subs2);
-        } else {
-            Iterable<Substitution> iterable = () -> iterator;
-            Stream<Substitution> rest = StreamSupport.stream(iterable.spliterator(), false);
-            return Stream.concat(Stream.of(first), mplus(rest, subs2));
-        }
+        return Stream.concat(subs1, subs2);
     }
 
     public static Goal allAux(Goal... g) {
