@@ -4,10 +4,6 @@ import java.util.stream.Stream;
 import org.morkland.java8kanren.Goal;
 import org.morkland.java8kanren.Substitution;
 
-/**
- *
- * @author hmo
- */
 public class Unsuccessful implements Goal{
 
     @Override

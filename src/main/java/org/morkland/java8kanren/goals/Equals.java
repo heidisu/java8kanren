@@ -5,10 +5,6 @@ import org.morkland.java8kanren.Goal;
 import org.morkland.java8kanren.Substitution;
 import org.morkland.java8kanren.Thing;
 
-/**
- * 
- * @author hmo
- */
 public class Equals implements Goal{
     Thing x;
     Thing y;
